@@ -76,8 +76,8 @@ my_cur.execute("insert into fruit_load_list values ('from streamlit')")
 streamlit.header("The fruit Load list contains:")
 def get_fruityvice_data(this_fruit_choice):
  with my_cnx.cursor() as mu_cur:
- my_cur.execute("select * from fruit_load_list")
- return my_cur.fetchall()
+      my_cur.execute("select * from fruit_load_list")
+      return my_cur.fetchall()
 
 if streamlit.button('Get Fruit Load List')
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
