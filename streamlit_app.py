@@ -35,19 +35,7 @@ streamlit.dataframe(fruits_to_show)
    #streamlit.dataframe(fruityvice_normalized)
 #except URLError as e:
    #streamlit.error() 
- #new 
 
-  
-streamlit.header("The fruit Load list contains:")
-def get_fruityvice_data(this_fruit_choice):
- With my_cnx.cursor() as mu_cur:
- my_cur.execute("select * from fruit_load_list")
- return my_cur.fetchall()
-
-if streamlit.button('Get Fruit Load List')
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-my_data_rows = get_fruit_load_list()
-streamlit.datafram(my_data_rows)
 
   
 #streamlit.header("Fruityvice Fruit Advice!")
@@ -81,3 +69,17 @@ add_my_fruit = fruit_choice
 streamlit.write('Thanks for adding ', add_my_fruit)
 
 my_cur.execute("insert into fruit_load_list values ('from streamlit')")
+
+ #new 
+
+  
+streamlit.header("The fruit Load list contains:")
+def get_fruityvice_data(this_fruit_choice):
+ With my_cnx.cursor() as mu_cur:
+ my_cur.execute("select * from fruit_load_list")
+ return my_cur.fetchall()
+
+if streamlit.button('Get Fruit Load List')
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+my_data_rows = get_fruit_load_list()
+streamlit.datafram(my_data_rows)
