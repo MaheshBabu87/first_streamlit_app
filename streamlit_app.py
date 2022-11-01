@@ -3,12 +3,7 @@ import pandas
 import requests
 import snowflake.connector 
 from urllib.error import URLError
- 
-
-
- #new 
-
-  
+#new   
 streamlit.header("The fruit Load list contains:")
 def get_fruityvice_data(this_fruit_choice):
  with my_cnx.cursor() as mu_cur:
